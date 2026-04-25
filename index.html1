@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+  Task Masters Website
+  Version: Samsung A Tabv1
+  Build: 2026-03
+  Source: SAMSUNG A9 1
+-->
+</head>
+<body>
+<!-- USER PREFERENCES (FOUNDATION) -->
+<section id="preferences" class="card">
+  <h2>User Preferences</h2>
+
+  <label for="languageSelect"><strong>Select Language</strong></label><br/>
+  <select id="languageSelect">
+    <option value="en">English</option>
+    <option value="es">Español</option>
+    <option value="fr">Français</option>
+  </select>
+
+  <button id="resetPrefs">
+    <strong>Reset Preferences</strong>
+  </button>
+</section>
+
+<!-- MAIN OVERVIEW CONTENT -->
+<section id="overview">
+  <div class="card">
+    <h2>Who We Are</h2>
+    <p>
+      TaskMasters delivers structured, ethical, and technically grounded solutions
+      across wireless, internet, automation, diagnostics, and digital services.
+pr    </p>
+  </div>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task Masters | Cortez Bell</title>
+<meta name="description" content="Task Masters, led by Cortez Bell, offers expert building, maintenance, business, and project management services with over 25 years of experience.">
+<meta name="keywords" content="Building Engineer, Maintenance, Business Solutions, Project Management, Task Masters, Cortez Bell, Residential Renovation, Commercial Maintenance">
+<meta name="author" content="Cortez Bell">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://zetrocb08@github.io/taskmasters-site/">
+<style>
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; scroll-behavior: smooth; }
+body.dark-mode { background-color: #1a1a1a; color: #f5f5f5; }
+header { background-color: #2a2a2a; color:blue; padding: 40px 20px; text-align: center; position: relative; }
+header h1 { font-size: 2.5em; margin-bottom: 10px; }
+header p { font-size: 1.2em; margin-bottom: 20px; }
+header .cta { background-color: #6a0dad; color:blue; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
+header .cta:hover { background-color: #8b2dd8; }
+section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+h2 { font-size: 2em; margin-bottom: 20px; color: #2a2a2a; text-align: center; }
+body.dark-mode h2 { color: #e0c0ff; }
+/* SERVICE STYLES */
+.services { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+.service { flex: 1 1 calc(33% - 20px); background-color: #f5f5f5; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; }
+.service:focus, .service:hover { outline: 3px solid #6a0dad; transform: scale(1.03); }
+body.dark-mode .service { background-color: #2a2a2a; color: #f5f5f5; }
+.service-icon { width: 60px; height: 60px; margin: 0 auto 10px; transform: scale(0); transition: transform 0.6s ease-out; }
+.service:hover .service-icon, .service:focus .service-icon { transform: scale(1.1); }
+/* ACCESSIBLE FOCUS STYLES */
+:focus { outline: 3px solid #6a0dad; outline-offset: 4px; }
+/* STATS */
+.stats { display: flex; justify-content: space-around; margin-top: 40px; }
+.stat { text-align: center; position: relative; }
+.stat-number { font-size: 2em; color: #6a0dad; margin-bottom: 10px; }
+.stat-svg { width: 80px; height: 80px; transform: rotate(-90deg); margin: 0 auto 10px; }
+.circle-bg { fill: none; stroke: #ddd; stroke-width: 8; }
+.circle-progress { fill: none; stroke: #6a0dad; strmuoke-width: 8; stroke-linecap: round; stroke-dasharray: 251.2; stroke-dashoffset: 251.2; transition: stroke-dashoffset 1s ease-in-out; }
+</style>
+  <style>
+    /* Theme transition animation */
+    :root {
+      --transition-speed: 0.4s;
+    }
+    html {
+      transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+    }
+
+    /* Theme variables */
+    :root[data-theme='light'] {
+      --bg: #ffffff;
+      --text: #000000;
+    }
+    :root[data-theme='dark'] {
+      --bg: #0f0f0f;
+      --text: #f5f5f5;
+    }
+
+    /* Apply colors */
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    /* Toggle button */
+    #theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 14px;
+      background: var(--text);
+      color: var(--bg);
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    /* Color palette */
+    #palette {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(0,0,0,0.6);
+      padding: 10px;
+      border-radius: 8px;
+      display: flex;
+      gap: 10px;
+      z-index: 999;
+    }
+
+    .color-swatch {
+      width: 25px;
+      height: 25px;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 2px solid white;
+    }.metacard-section {
+  padding: 3rem 1.5rem;
+  border-top: 1px solid #ddd;
+}
+
+.metacard-subtitle {
+  color: #555;
+  max-width: 600px;
+}
+
+.metacard-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.metacard-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.metacard-details li {
+  margin-bottom: 0.5rem;
+}
+
+.metacard-qr-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  min-height: 180px;
+  border: 2px dashed #999;
+  color: #666;
+  font-size: 0.9rem;
+}
+  </style>
+</head>
+<header role="banner">
+<h1>Cortez Bell</h1>
+<p>Entrepreneurial Leader & Building Engineer | Driving innovative solutions with integrity and hands-on expertise.</p>
+<a href="#services" class="cta" role="button">View Services</a>
+<button id="darkModeToggle" aria-label="Toggle dark mode" style="position:absolute; top:20px; right:20px; padding:8px 12px; border:none; border-radius:5px; background:#6a0dad; color:white; cursor:pointer;">Toggle Dark Mode</button>
+<header>
+  <h1>TaskMasters</h1>
+  <p>Sales • Service • Solutions</p>
+  <button class="cta">Sales</button>
+  <button class="cta">Service</button>
+  <button class="cta">Solutions</button>
+</header>
+
+<main role="main">
+<section id="metacard" aria-labelledby="metacard-title" class="metacard-section">
+  <header>
+    <h2 id="metacard-title">Task Masters — Digital Business Card</h2>
+    <p class="metacard-subtitle">
+      Fast access to verified services, contact details, and business identity.
+    </p>
+  </header>
+
+  <div class="metacard-content">
+    <ul class="metacard-details">
+      <li><strong>Business:</strong> Task Masters</li>
+      <li><strong>Tagline:</strong> Sales · Service · Solutions</li>
+      <li><strong>Contact:</strong> Available upon request</li>
+      <li><strong>Status:</strong> Public-Facing Deployment</li>
+    </ul>
+
+    <div class="metacard-qr-placeholder" aria-hidden="true">
+      <span>QR Code Endpoint Established</span>
+    </div>
+  </div>
+</section>
+<section id="services" aria-labelledby="services-title">
+<h2 id="services-title">Services & Solutions</h2>
+<div class="services" role="list">
+    <div class="service" role="listitem" tabindex="0" aria-label="Building and Maintenance services">
+        <svg class="service-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+            <circle cx="32" cy="32" r="30" stroke="#6a0dad" stroke-width="4" fill="none"/>
+            <path d="M16 32h32" stroke="#6a0dad" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <h3>Building & Maintenance</h3>
+        <p>Repairs, renovations, electrical, plumbing, HVAC, and property upkeep.</p>
+    </div>
+    <div class="service" role="listitem" tabindex="0" aria-label="Business and Sales services">
+        <svg class="service-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+            <rect x="12" y="16" width="40" height="32" stroke="#6a0dad" stroke-width="4" fill="none"/>
+            <path d="M12 32h40" stroke="#6a0dad" stroke-width="4"/>
+        </svg>
+        <h3>Business & Sales</h3
+        <p>Client acquisition, marketing, sales operations, and logistics solutions.</p>
+    </div>
+    <div class="service" role="listitem" tabindex="0" aria-label="Project Management services">
+        <svg class="service-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+            <polygon points="32,8 8,56 56,56" stroke="#6a0dad" stroke-width="4" fill="none"/>
+        </svg>
+        <h3>Project Management</h3>
+        <p>Scheduling, compliance, budget planning, and workforce management.</p>
+    </div>
+</div>
+</section>
+
+<section id="stats" aria-labelledby="stats-title">
+<h2 id="stats-title">Achievements & Expertise</h2>
+<div class="stats" role="list">
+    <div class="stat" role="listitem">
+        <svg class="stat-svg" aria-hidden="true" viewBox="0 0 64 64">
+            <circle class="circle-bg" cx="32" cy="32" r="25"></circle>
+            <circle class="circle-progress" cx="32" cy="32" r="25" data-target="25"></circle>
+        </svg>
+        <div class="stat-number" data-target="25">0</div>
+        <p>Years Experience</p>
+    </div>
+    <div class="stat" role="listitem">
+        <svg class="stat-svg" aria-hidden="true" viewBox="0 0 64 64">
+            <circle class="circle-bg" cx="32" cy="32" r="25"></circle>
+            <circle class="circle-progress" cx="32" cy="32" r="25" data-target="500"></circle>
+        </svg>
+        <div class="stat-number" data-target="500">0</div>
+        <p>Projects Completed</p>
+    </div>
+    <div class="stat" role="listitem">
+        <svg class="stat-svg" aria-hidden="true" viewBox="0 0 64 64">
+            <circle class="circle-bg" cx="32" cy="32" r="25"></circle>
+            <circle class="circle-progress" cx="32" cy="32" r="25" data-target="100"></circle>
+        </svg>
+        <div class="stat-number" data-target="100">0</div>
+        <p>Client Satisfaction %</p>
+    </div>
+</div>
+</section>
+</main>
+
+<!-- ABOUT SECTION -->
+<section id="about" aria-labelledby="about-title" style="padding:60px 20px; max-width:1200px; margin:0 auto;">
+<h2 id="about-title" style="text-align:center;">About Task Masters</h2>
+<p style="max-width:900px; margin:20px auto; font-size:1.1em; line-height:1.6; text-align:center;">
+Task Masters is built on integrity, discipline, and a dedication to solving problems the right way—without shortcuts, without excuses.
+Founded and operated by <strong>Cortez Bell</strong>, a hands-on professional with over 25 years of combined experience across building engineering, maintenance, project leadership, business operations, sales, and entrepreneurial management.
+</p>g
+<div style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center; margin-top:40px;">
+    <div style="flex:1 1 300px; background:#f5f5f5; padding:25px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+        <h3 style="color:#6a0dad; text-align:center;">Mission</h3>
+        <p style="line-height:1.6;">To provide honest, high‑quality, reliable building and business solutions that uplift clients, strengthen communities, and deliver results backed by skill, precision, and accountability.</p>
+    </div>
+    <div style="flex:1 1 300px; background:#f5f5f5; padding:25px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+        <h3 style="color:#6a0dad; text-align:center;">Values</h3>
+        <ul style="line-height:1.6; padding-left:20px;">
+            <li><strong>Integrity:</strong> Do the right thing whether someone is watching or not.</li>
+            <li><strong>Accountability:</strong> Own every action, every outcome, every project.</li>
+            <li><strong>Precision:</strong> Deliver work that’s clean, correct, and long‑lasting.</li>
+            <li><strong>Community:</strong> Serve people, not just contracts.</li>
+            <li><strong>Innovation:</strong> Use modern solutions to solve old problems better.</li>
+        </ul>
+    </div>
+    <div style="flex:1 1 300px; background:#f5f5f5; padding:25px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+        <h3 style="color:#6a0dad; text-align:center;">Who I Am</h3>
+        <p style="line-height:1.6;">A builder. A problem solver. A strategist. A leader with experience across construction, repairs, electrical, plumbing, contracting, logistics, sales, risk management, and entrepreneurial operations. Every project receives the same energy: excellence.</p>
+    </div>
+</div>
+</section>
+
+<footer role="contentinfo" style="background:#2a2a2a; color:white; padding:40px 20px; text-align:center; margin-top:60px;">
+    <nav aria-label="Footer Navigation" style="margin-bottom:20px;">
+        <a href="#services" style="color:#d99aff; margin:0 15px; text-decoration:none;">Services</a>
+        <a href="#stats" style="color:#d99aff; margin:0 15px; text-decoration:none;">Achievements</a>
+        <a href="#contact" style="color:#d99aff; margin:0 15px; text-decoration:none;">Contact</a>
+    </nav>
+    <p style="margin:10px 0;">Task Masters © <span id="year"></span> | Built with integrity, precision, and innovation.</p>
+    <p style="margin:10px 0; font-size:0.9em;">Serving surrounding areas and the greater Kansas City, Missouri and Kansas areas
+  | Serving Residential, Commercial, and Enterprise Clients</p>
+<!-- SERVICES DEEP-DIVE SECTION -->
+<section id="services-detailed" aria-labelledby="services-detailed-title" style="padding:60px 20px; max-width:1200px; margin:0 auto;">
+<h2 id="services-detailed-title" style="text-align:center;">Detailed Services & Solutions</h2>
+<p style="max-width:900px; margin:0 auto 40px; text-align:center; font-size:1.1em; line-height:1.6;">A full breakdown of Task Masters’ core services. Every area reflects decades of hands-on expertise, disciplined problem‑solving, and a commitment to high‑quality, lasting results.</p>
+
+<div style="display:flex; flex-direction:column; gap:40px;">
+
+    <!-- BUILDING & MAINTENANCE CARD -->
+    <div style="background:#f5f5f5; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <h3 style="color:#6a0dad;">Building & Maintenance</h3>
+        <p style="line-height:1.6;">Full‑spectrum residential, commercial, and facilities maintenance. From preventative repairs to major upgrades.</p>
+        <ul style="line-height:1.7; padding-left:20px; margin-top:15px;">
+            <li>Electrical troubleshooting & fixture installation</li>
+            <li>Plumbing repairs, leak detection, faucet/toilet replacements</li>
+            <li>Drywall, framing, and structural reinforcement</li>
+            <li>Flooring installs & repairs (tile, laminate, hardwood)</li>
+            <li>Interior & exterior painting solutions</li>
+            <li>General carpentry & cabinetry work</li>
+            <li>Preventative maintenance & scheduled upkeep plans</li>
+        </ul>
+        <p style="margin-top:15px; font-weight:bold;">Starting Range: $85/hr – $150/hr (depending on complexity)</p>
+    </div>
+
+    <!-- BUSINESS & SALES CARD -->
+    <div style="background:#f5f5f5; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <h3 style="color:#6a0dad;">Business & Sales Development</h3>
+        <p style="line-height:1.6;">Strategic solutions that help businesses grow, operate more efficiently, and increase revenue.</p>
+        <ul style="line-height:1.7; padding-left:20px; margin-top:15px;">
+            <li>Client acquisition strategies & lead generation</li>
+            <li>Sales funnel optimization</li>
+            <li>Brand messaging & customer communication</li>
+            <li>Logistics & workflow streamlining</li>
+            <li>Startup support & entrepreneurial consulting</li>
+        </ul>
+        <p style="margin-top:15px; font-weight:bold;">Starting Range: $300 – $2,500/project</p>
+    </div>
+
+    <!-- PROJECT MANAGEMENT CARD -->
+    <div style="background:#f5f5f5; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <h3 style="color:#6a0dad;">Project Management</h3>
+        <p style="line-height:1.6;">Planning, executing, and leading projects with precision. Ideal for property owners, businesses, and multi‑team operations.</p>
+        <ul style="line-height:1.7; padding-left:20px; margin-top:15px;">
+            <li>Workforce coordination & scheduling</li>
+            <li>Budget forecasting & materials management</li>
+            <li>Quality control & compliance verification</li>
+            <li>Vendor oversight & contractor supervision</li>
+            <li>Risk management & contingency planning</li>
+        </ul>
+        <p style="margin-top:15px; font-weight:bold;">Starting Range: $500 – $10,000 (project‑based)</p>
+    </div>
+</div>
+</section>
+
+<!-- EXPANDED SERVICES & PRICING SECTION -->
+<section id="services-expanded" aria-labelledby="services-expanded-title" style="padding:60px 20px; max-width:1200px; margin:0 auto;">
+<h2 id="services-expanded-title" style="text-align:center;">Expanded Services & Pricing Guide</h2>
+<p style="max-width:900px; margin:0 auto 40px; text-align:center; font-size:1.1em; line-height:1.6;">Task Masters offers a wide range of technical, construction, business, and consulting services. All prices are based on national averages but set slightly below market rates to remain competitive while maintaining professional quality.</p>
+
+<div style="display:flex; flex-direction:column; gap:40px;">
+
+    <!-- TECH & I.T. SERVICES -->
+    <div style="background:#f5f5f5; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <h3 style="color:#6a0dad;">Tech Repair & I.T. Troubleshooting</h3>
+        <p style="line-height:1.6;">Professional tech diagnostics, repair, setup, and troubleshooting for home and small business environments.</p>
+        <ul style="line-height:1.7; padding-left:20px; margin-top:15px;">
+            <li>Device repair (phones, tablets, laptops, desktops)</li>
+            <li>Network troubleshooting (WiFi issues, slow speeds, router setup)</li>
+            <li>Software installation & error fixing</li>
+            <li>Virus/malware removal & system cleanup</li>
+            <li>Data backup & restore</li>
+            <li>Smart home setup (cameras, sensors, automation)</li>
+        </ul>
+        <p style="margin-top:15px; font-weight:bold;">Pricing: $40/hr – $90/hr (below national tech-service average of $65–$120/hr)</p>
+    </div>
+
+    <!-- CONSULTATION SERVICES -->
+    <div style="background:#f5f5f5; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <h3 style="color:#6a0dad;">Consultation & Problem-Solving</h3>
+        <p style="line-height:1.6;">Expert guidance, troubleshooting, and solution planning across home improvement, business strategy, technology, and project development.</p>
+        <ul style="line-height:1.7; padding-left:20px; margin-top:15px;">
+            <li>Home/project assessment consulting</li>
+            <li>Technical troubleshooting & diagnostics</li>
+            <li>Business process & efficiency review</li>
+            <li>Strategic planning & operations consulting</li>
+            <li>Remote or in-person problem-solving sessions</li>
+        </ul>
+        <p style="margin-top:15px; font-weight:bold;">Pricing: $35/hr – $75/hr (below national $50–$150/hr consulting range)</p>
+    </div>
+
+    <!-- HANDYMAN SERVICES -->
+    <div style="background:#f5f5f5; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <h3 style="color:#6a0dad;">Handyman, Landscaping & General Maintenance</h3>
+        <p style="line-height:1.6;">Fast, reliable service for day-to-day home repairs, yard upkeep, installations, and seasonal maintenance — and so much more.</p>
+        <ul style="line-height:1.7; padding-left:20px; margin-top:15px;">
+            <li>TV mounting — <strong>$55 – $100</strong></li>
+            <li>Furniture assembly — <strong>$40 – $120</strong></li>
+            <li>Light fixture replacement — <strong>$45 – $90</strong></li>
+            <li>Toilet repair or replacement — <strong>$65 – $160</strong></li>
+            <li>Door fixes & lock installation — <strong>$45 – $120</strong></li>
+            <li>Caulking, sealing, patch repairs — <strong>$40 – $140</strong></li>
+            <li>Minor plumbing (clogs, leaks) — <strong>$45 – $150</strong></li>
+            <li>Lawn mowing, trimming & edging — <strong>$35 – $95</strong></li>
+            <li>Garden & lot upkeep (weeding, cleanup, soil work) — <strong>$40 – $150</strong></li>
+            <li>Brush, scrub & debris removal — <strong>$60 – $250</strong></li>
+            <li>Tree trimming & small tree removal — <strong>$75 – $350</strong></li>
+            <li>All‑season yard maintenance (spring, summer, fall, winter) — <strong>$40 – $200</strong></li>
+            <li>Appliance installation (washers, dryers, dishwashers, etc.) — <strong>$65 – $180</strong></li>
+            <li>Sheetrock install & repair — <strong>$60 – $400</strong></li>
+            <li>Asphalt sealcoating & patching — <strong>$150 – $1,200</strong></li>
+            <li>Masonry services (tuckpointing, brick repair) — <strong>$150 – $2,500</strong></li>
+            <li>Concrete: form‑to‑finish (sidewalks, steps, slabs) — <strong>$300 – $6,500</strong></li>
+            <li>Foundation crack repair — <strong>$250 – $1,800</strong></li>
+            <li>Window installation & repair — <strong>$80 – $450</strong></li>
+        </ul>
+        <p style="margin-top:15px; font-weight:bold;">Hourly Rate Option: $55/hr – $95/hr</p>
+        <p style="font-style:italic; margin-top:10px;">*And so much more — custom requests always welcome.</p>
+    </div>
+
+    <!-- SUBCONTRACTOR SERVICES -->
+    <div style="background:#f5f5f5; padding:25px; border-radius:12px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <h3 style="color:#6a0dad;">(Sub)Contractor Services</h3>
+        <p style="line-height:1.6;">Professional contracting support for homeowners, contractors, and businesses needing experienced labor or project assistance.</p>
+        <ul style="line-height:1.7; padding-left:20px; margin-top:15px;">
+            <li>Labor support & skilled trade assistance</li>
+            <li>Jobsite prep & cleanup</li>
+            <li>Material handling and delivery</li>
+            <li>Installations, repairs, and construction assistance</li>
+            <li>Independent contracting for specialized tasks</li>
+        </ul>
+        <p style="margin-top:15px; font-weight:bold;">Pricing: $100 – $250/day or project-based depending on scope</p>
+    </div>
+
+    <!-- HOME REMODELING -->
+    <div style="background:#f5f5f5; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <h3 style="color:#6a0dad;">Home Remodeling & Renovation</h3>
+        <p style="line-height:1.6;">High-quality upgrades for homeowners looking to improve property value, beauty, functionality, and long-term stability.</p>
+        <ul style="line-height:1.7; padding-left:20px; margin-top:15px;">
+            <li>Kitchen upgrades & fixture installs</li>
+            <li>Bathroom renovation & tile work</li>
+            <li>Flooring installation (tile, laminate, hardwood)</li>
+            <li>Basement finishing & room conversions</li>
+            <li>Interior painting & drywall finishing</li>
+            <li>Exterior improvements (porches, entryways)</li>
+        </ul>
+        <p style="margin-top:15px; font-weight:bold;">Pricing: $1,000 – $50,000 (project-based, depending on scale)</p>
+    </div>
+
+</div>
+</section>
+
+<!-- SOCIAL MEDIA SECTION --> -->
+<section id="social" aria-labelledby="social-title" style="padding:60px 20px; max-width:1200px; margin:0 auto; text-align:center;">
+<h2 id="social-title">Connect With Task Masters</h2>
+<p style="max-width:800px; margin:0 auto 30px; font-size:1.1em; line-height:1.6;">Follow Task Masters across platforms. Even if profiles aren’t active yet, these links prepare your brand foundation for future expansion.</p>
+<div style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap;">
+    <a href="#" aria-label="Facebook (coming soon)" style="text-decoration:none;">
+        <svg width="50" height="50" viewBox="0 0 64 64" fill="none" stroke="#6a0dad" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="32" r="30" /><path d="M38 20h-4c-2.2 0-4 1.8-4 4v6h-4v6h4v12h6V36h4l2-6h-6v-4c0-1.1.9-2 2-2h4v-6z" /></svg>
+    </a>
+    <a href="#" aria-label="Instagram (coming soon)" style="text-decoration:none;">
+        <svg width="50" height="50" viewBox="0 0 64 64" fill="none" stroke="#6a0dad" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="32" r="30" /><rect x="20" y="20" width="24" height="24" rx="6" /><circle cx="32" cy="32" r="6" /><circle cx="42" cy="22" r="2" /></svg>
+    </a>
+    <a href="#" aria-label="LinkedIn (coming soon)" style="text-decoration:none;">
+        <svg width="50" height="50" viewBox="0 0 64 64" fill="none" stroke="#6a0dad" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="32" r="30" /><line x1="22" y1="26" x2="22" y2="42" /><circle cx="22" cy="20" r="2" /><path d="M30 42V30c0-4 3-6 6-6s6 2 6 6v12" /></svg>
+    </a>
+</div>
+</section>
+
+<!-- TESTIMONIALS SECTION -->
+<section id="testimonials" aria-labelledby="testimonials-title" style="padding:60px 20px; max-width:1200px; margin:0 auto; text-align:center;">
+<h2 id="testimonials-title">What Clients Say</h2>
+<p style="max-width:800px; margin:0 auto 40px; font-size:1.1em; line-height:1.6;">Real feedback from homeowners, businesses, and partners who’ve experienced the Task Masters standard of reliability, professionalism, and craftsmanship.</p>
+<div style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;">
+    <div style="flex:1 1 300px; background:#f5f5f5; padding:25px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); text-align:left;">
+        <p style="font-style:italic;">“Professional, knowledgeable, and efficient. Cortez handled our property repairs with precision and honesty. Couldn’t ask for better service.”</p>
+        <p style="text-align:right; font-weight:bold; margin-top:10px;">— J. Thompson</p>
+    </div>
+    <div style="flex:1 1 300px; background:#f5f5f5; padding:25px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); text-align:left;">
+        <p style="font-style:italic;">“Task Masters saved us thousands by repairing what another contractor said needed full replacement. Honest and skilled.”</p>
+        <p style="text-align:right; font-weight:bold; margin-top:10px;">— M. Rivera</p>
+    </div>
+    <div style="flex:1 1 300px; background:#f5f5f5; padding:25px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); text-align:left;">
+        <p style="font-style:italic;">“Reliable, respectful, and extremely detailed. Cortez approaches business with integrity you don’t see often anymore.”</p>
+        <p style="text-align:right; font-weight:bold; margin-top:10px;">— S. Williams</p>
+    </div>
+</div>
+</section>
+
+<!-- FAQ SECTION -->
+<section id="faq" aria-labelledby="faq-title" style="padding:60px 20px; max-width:1200px; margin:0 auto;">
+{{REPLACE_ME_FAQ_CONTENT}}
+</section>
+
+<!-- PRICING SECTION -->
+<section id="pricing" aria-labelledby="pricing-title" style="padding:60px 20px; max-width:1200px; margin:0 auto;">
+<h2 id="pricing-title" style="text-align:center;">Service Pricing & Rates</h2>
+<p style="max-width:900px; margin:0 auto 40px; text-align:center; font-size:1.1em; line-height:1.6;">Transparent, competitive pricing set slightly below national averages — delivering professional quality at an accessible rate. Every job is completed with integrity, precision, and respect for your time and property.</p>
+
+<!-- TECH & IT PRICING -->
+<h3 style="margin-top:40px; color:#6a0dad;">Tech Repair & I.T. Troubleshooting</h3>
+<div style="display:flex; flex-wrap:wrap; gap:20px;">
+    <div style="flex:1 1 300px; background:#f5f5f5; padding:20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <h4>Device Diagnostics</h4>
+        <p>$35 flat rate</p>
+    </div>
+    <div style="flex:1 1 300px; background:#f5f5f5; padding:20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <h4>Software Repair / OS Fix</h4>
+        <p>$45–$75</p>
+    </div>
+    <div style="flex:1 1 300px; background:#f5f5f5; padding:20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <h4>Network Troubleshooting</h4>
+        <p>$40–$65</p>
+    </div>
+    <div style="flex:1 1 300px; background:#f5f5f5; padding:20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <h4>Smart Home Setup</h4>
+        <p>$50–$85</p>
+    </div>
+</div>
+
+<!-- CONSULTATION PRICING -->
+<h3 style="margin-top:50px; color:#6a0dad;">Professional Consultation</h3>
+<div style="background:#f5f5f5; padding:20px; border-radius:10px; max-width:400px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+    <h4>On-Site or Virtual Consultation</h4>
+    <p>$35 per hour</p>
+    <p style="font-size:0.9em;">Includes troubleshooting, project planning, solution mapping, and professional recommendations.</p>
+</div>
+
+<!-- HANDYMAN & GENERAL REPAIR PRICING -->
+<h3 style="margin-top:50px; color:#6a0dad;">Handyman Services & General Repairs</h3>
+<div style="display:flex; flex-wrap:wrap; gap:20px;">
+    <div style="flex:1 1 300px; background:#f5f5f5; padding:20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <h4>Basic Repairs (doors, fixtures, locks)</h4>
+        <p>$45–$90</p>
+    </div>
+    <div style="flex:1 1 300px; background:#f5f5f5; padding:20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <h4>Sheetrock Install & Patchwork</h4>
+        <p>$60–$150</p>
+    </div>
+    <div style="flex:1 1 300px; background:#f5f5f5; padding:20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <h4>Appliance Install</h4>
+        <p>$50–$110</p>
+    </div>
+</div>
+
+<!-- LANDSCAPING & YARD MAINTENANCE -->
+<h3 style="margin-top:50px; color:#6a0dad;">Landscaping, Yard Care & Maintenance</h3>
+<div style="display:flex; flex-wrap:wrap; gap:20px;">
+    <div style="flex:1 1 300px; background:#f5f5f5; padding:20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <h4>Mowing & Trim</h4>
+        <p>$35–$60 per yard</p>
+    </div>
+    <div style="flex:1 1 300px; background:#f5f5f5; padding:20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <h4>Brush / Scrub Clearing</h4>
+        <p>$50–$150</p>
+    </div>
+    <div style="flex:1 1 300px; background:#f5f5f5; padding:20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <h4>Tree Trimming (small–medium)</h4>
+        <p>$60–$200</p>
+    </div>
+    <div style="flex:1 1 300px; background:#f5f5f5; padding:20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <h4>Seasonal Cleanups</h4>
+        <p>$75–$180</p>
+    </div>
+</div>
+<p style="text-align:center; margin-top:15px; font-style:italic;">and so much more…</p>
+
+<!-- CONCRETE, MASONRY & CONTRACTING -->
+<h3 style="margin-top:50px; color:#6a0dad;">Concrete, Masonry & Contracting Services</h3>
+<div style="display:flex; flex-wrap:wrap; gap:20px;">
+    <div style="flex:1 1 300px; background:#f5f5f5; padding:20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <h4>Concrete (form to finish)</h4>
+        <p>$8–$12 per sq. ft.</p>
+    </div>
+    <div style="flex:1 1 300px; background:#f5f5f5; padding:20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <h4>Masonry / Tuckpoint</h4>
+        <p>$12–$25 per sq. ft.</p>
+    </div>
+    <div style="flex:1 1 300px; background:#f5f5f5; padding:20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <h4>Asphalt Patch / Sealcoat</h4>
+        <p>$0.20–$0.40 per sq. ft.</p>
+    </div>
+    <div style="flex:1 1 300px; background:#f5f5f5; padding:20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <h4>Window Install / Repair</h4>
+        <p>$60–$180</p>
+    </div>
+</div>
+<p style="text-align:center; margin-top:20px; font-style:italic;">Full home remodeling and subcontracting services available upon request.</p>
+
+</section>
+
+<!-- PORTFOLIO SECTION --> -->
+<section id="portfolio" aria-labelledby="portfolio-title" style="padding:60px 20px; max-width:1200px; margin:0 auto; text-align:center;">
+<h2 id="portfolio-title">Project Portfolio</h2>
+<p style="max-width:900px; margin:0 auto 40px; font-size:1.1em; line-height:1.6;">A showcase of completed repairs, renovations, installations, yard transformations, and technical solutions. Real images will be added later — these are professional placeholders to demonstrate layout and capability.</p>
+
+<div style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;">
+    <!-- Portfolio Item 1 -->
+    <div style="flex:1 1 300px; background:#fff; padding:0; border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <div style="background:#ddd; height:180px; display:flex; align-items:center; justify-content:center; color:#555;">Image Placeholder</div>
+        <div style="padding:20px; text-align:left;">
+            <h3 style="color:#6a0dad;">Bathroom Renovation</h3>
+            <p style="line-height:1.6;">Tile replacement, plumbing upgrades, moisture-proof sealing, and modern fixture installation.</p>
+        </div>
+    </div>
+
+    <!-- Portfolio Item 2 -->
+    <div style="flex:1 1 300px; background:#fff; padding:0; border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <div style="background:#ddd; height:180px; display:flex; align-items:center; justify-content:center; color:#555;">Image Placeholder</div>
+        <div style="padding:20px; text-align:left;">
+            <h3 style="color:#6a0dad;">Yard Cleanup & Landscaping</h3>
+            <p style="line-height:1.6;">Brush removal, lawn restoration, edging, seasonal cleanup, and garden bed shaping.</p>
+        </div>
+    </div>
+
+    <!-- Portfolio Item 3 -->
+    <div style="flex:1 1 300px; background:#fff; padding:0; border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <div style="background:#ddd; height:180px; display:flex; align-items:center; justify-content:center; color:#555;">Image Placeholder</div>
+        <div style="padding:20px; text-align:left;">
+            <h3 style="color:#6a0dad;">Drywall & Interior Repair</h3>
+            <p style="line-height:1.6;">Sheetrock installation, patching, sanding, and full interior repaint finishing.</p>
+        </div>
+    </div>
+
+    <!-- Portfolio Item 4 -->
+    <div style="flex:1 1 300px; background:#fff; padding:0; border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <div style="background:#ddd; height:180px; display:flex; align-items:center; justify-content:center; color:#555;">Image Placeholder</div>
+        <div style="padding:20px; text-align:left;">
+            <h3 style="color:#6a0dad;">Concrete Form-to-Finish</h3>
+            <p style="line-height:1.6;">Sidewalk pour, step forming, reinforcement, leveling, and finishing work.</p>
+        </div>
+    </div>
+
+    <!-- Portfolio Item 5 -->
+    <div style="flex:1 1 300px; background:#fff; padding:0; border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <div style="background:#ddd; height:180px; display:flex; align-items:center; justify-content:center; color:#fff;">Image Placeholder</div>
+        <div style="padding:20px; text-align:left;">
+            <h3 style="color:#6a0dad;">Tech & I.T. Troubleshooting</h3>
+            <p style="line-height:1.6;">Device diagnostics, software repair, network solutions, and smart-home integration.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<footer
+
+<footer
+
+<section id="contact" aria-labelledby="contact-title" style="padding:60px 20px; max-width:1200px; margin:0 auto;">
+<h2 id="contact-title" style="text-align:center;">Contact Task Masters</h2>
+<p style="text-align:center; max-width:700px; margin:0 auto 30px;">Have a project, repair, or business solution you’d like to discuss? Reach out below. Task Masters responds within 24–48 hours.</p>
+
+<form aria-label="Contact Form" style="max-width:700px; margin:0 auto; display:flex; flex-direction:column; gap:20px;">
+    <label>
+        <span>Name</span>
+        <input type="text" name="name" required aria-required="true" style="width:100%; padding:12px; border-radius:6px; border:1px solid #ccc;">
+    </label>
+
+    <label>
+        <span>Email</span>
+        <input type="email" name="email" required aria-required="true" style="width:100%; padding:12px; border-radius:6px; border:1px solid #ccc;">
+    </label>
+
+    <label>
+        <span>Phone</span>
+        <input type="tel" name="phone" style="width:100%; padding:12px; border-radius:6px; border:1px solid #ccc;">
+    </label>
+
+    <label>
+        <span>Your Message</span>
+        <textarea name="message" rows="5" required aria-required="true" style="width:100%; padding:12px; border-radius:6px; border:1px solid #ccc;"></textarea>
+    </label>
+
+    <button type="submit" aria-label="Submit Contact Form" style="padding:14px; background:#6a0dad; color:white; border:none; border-radius:6px; font-size:1.1em; cursor:pointer;">Send Message</button>
+</form>
+</section>
+
+<script>
+document.getElementById('year').innerText=new Date().getFullYear();
+</script>
+
+<script>
+// Dark mode
+document.getElementById('darkModeToggle').addEventListener('click',()=>document.body.classList.toggle('dark-mode'));
+// Animate Service Icons
+const serviceIcons=document.querySelectorAll('.service-icon');
+serviceIcons.forEach((icon,index)=>{ setTimeout(()=>{ icon.style.transform='scale(1)'; }, index*200); });
+// Stats Animation
+const counters=document.querySelectorAll('.stat-number');
+counters.forEach((counter,index)=>{
+ const circle=document.querySelectorAll('.circle-progress')[index];
+ const radius=circle.r.baseVal.value;
+ const circumference=2*Math.PI*radius;
+ circle.style.strokeDasharray=circumference;
+ circle.style.strokeDashoffset=circumference;
+ const target=+counter.getAttribute('data-target');
+ let count=0;
+ const step=target/200;
+ const interval=setInterval(()=>{
+  count+=step;
+  if(count>=target){ count=target; clearInterval(interval);} 
+  counter.innerText=Math.ceil(count);
+  const offset=circumference-(count/target)*circumference;
+  circle.style.strokeDashoffset=offset;
+ },20);
+});
+</script>
+"+"
+  <script>
+    // Auto light/dark mode switching
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    function applyMode(e){ document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light'); }
+    applyMode(prefersDark);
+    prefersDark.addEventListener('change', applyMode);
+  </script>
+  <button id="theme-toggle">Toggle Theme</button>
+  <div id="palette">
+    <div class="color-swatch" data-bg="#ffffff" data-text="#222222" style="background:#ffffff;"></div>
+    <div class="color-swatch" data-bg="#f7c7da" data-text="#222222" style="background:#f7c7da;"></div>
+    <div class="color-swatch" data-bg="#0a1a2f" data-text="#f5f5f5" style="background:#0a1a2f;"></div>
+    <div class="color-swatch" data-bg="#3a0c23" data-text="#f5f5f5" style="background:#3a0c23;"></div>
+  </div>
+
+  <script>
+    // Auto system mode
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    function applyMode(e){ document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light'); }
+    applyMode(prefersDark);
+    // Manual Theme Toggle
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('manual-theme', next);
+    });
+
+    // Load manual theme if set
+    const savedTheme = localStorage.getItem('manual-theme');
+    if(savedTheme){ document.documentElement.setAttribute('data-theme', savedTheme); }
+
+    // Color palette system
+    document.querySelectorAll('.color-swatch').forEach(swatch => {
+      swatch.addEventListener('click', () => {
+        const bg = swatch.getAttribute('data-bg');
+        const text = swatch.getAttribute('data-text');
+        document.documentElement.style.setProperty('--bg', bg);
+        document.documentElement.style.setProperty('--text', text);
+        localStorage.setItem('custom-bg', bg);
+        localStorage.setItem('custom-text', text);
+      });
+    });
+
+    // Load custom palette if saved
+    const cbg = localStorage.getItem('custom-bg');
+    const ctx = localStorage.getItem('custom-text');
+    if(cbg && ctx){
+      document.documentElement.style.setProperty('--bg', cbg);
+      document.documentElement.style.setProperty('--text', ctx);
+    }
+  </script>
+  <!-- ASSISTANT SELECTION UI (SAL / URVA / AIVA) -->
+  <div id="sal-selection" aria-live="polite" style="position: absolute; top: 18%; left: 50%; transform: translateX(-50%); z-index:10001; display:none;">
+    <div id="sal-selection-bubble" style="background: rgba(255,255,255,0.95); color:var(--text); padding:14px 18px; border-radius:12px; box-shadow:0 8px 28px rgba(0,0,0,0.12); max-width:520px; font-family: 'Merriweather', serif; text-align:center;">
+      <div id="sal-selection-text" style="font-weight:600; margin-bottom:12px;">Would you like me to assign your preferred Virtual Assistant now?</div>
+      <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+        <button id="assign-sal" class="sal-select-btn">Assign SAL</button>
+        <button id="assign-urva" class="sal-select-btn">Assign URVA</button>
+        <button id="assign-aiva" class="sal-select-btn">Assign AIVA</button>
+      </div>
+      <div style="margin-top:10px; font-size:0.9em; color:#666;">You may change this choice anytime during your session.</div>
+    </div>
+  </div>
+
+  <style>
+    .sal-select-btn{ background:#6a0dad; color:white; border:none; padding:10px 14px; border-radius:8px; cursor:pointer; font-weight:700; }
+    .sal-select-btn[disabled]{ opacity:0.45; cursor:not-allowed; }
+  </style>
+
+  <script>
+    // --- Assistant selection and session control ---
+    (function(){
+      // Placeholder user model. In production, replace with real auth/user object.
+      function getUserProfile(){
+        // Example: window.currentUser = {signedIn:true, username:'Cortez', tier:'free'|'trial'|'paid'};
+        return window.currentUser || { signedIn:false, username:null, tier:'guest' };
+      }
+
+      // Detect availability and show selection UI when appropriate
+      const selection = document.getElementById('sal-selection');
+      const selText = document.getElementById('sal-selection-text');
+      const btnSal = document.getElementById('assign-sal');
+      const btnUrva = document.getElementById('assign-urva');
+      const btnAiva = document.getElementById('assign-aiva');
+
+      // Utility: display SAL bubble with buttons adapted to tier
+      function showSelectionUI(){
+        const user = getUserProfile();
+        // Determine which buttons to enable
+        btnSal.disabled = false; // always available
+        if(user.signedIn && (user.tier === 'free' || user.tier === 'trial' || user.tier === 'paid')){
+          btnUrva.disabled = false;
+        } else {
+          btnUrva.disabled = true;
+        }
+        if(user.signedIn && (user.tier === 'trial' || user.tier === 'paid')){
+          btnAiva.disabled = false;
+        } else {
+          btnAiva.disabled = true;
+        }
+
+        // Only show the UI for non-guest or for guests if you want them
+        if(user.signedIn){
+          selection.style.display = 'block';
+        } else {
+          // For guest visitors, SAL will not show the assign UI by default
+          // but you may enable it by uncommenting the next line
+          // selection.style.display = 'block';
+        }
+      }
+
+      // Apply assistant choice for the session
+      function assignAssistant(name){
+        // name: 'SAL' | 'URVA' | 'AIVA'
+        // Save session choice (not permanent) and also store persistent default if user opts in
+        sessionStorage.setItem('activeAssistant', name);
+
+        // If user is signed in, record preference as default for convenience (optional)
+        const user = getUserProfile();
+        if(user.signedIn){
+          try{ localStorage.setItem('preferredAssistant_'+(user.username||'user'), name); }catch(e){}
+        }
+
+        // Announce and handoff
+        salSay(`Very well. I will assign ${name} for this session.`);
+        // hide selection UI
+        selection.style.display = 'none';
+
+        // Simulate handoff: trigger an event others can listen to
+        window.dispatchEvent(new CustomEvent('assistant:assigned',{detail:{assistant:name, user:user}}));
+
+        // Activate assistant-specific UI/behavior
+        activateAssistant(name);
+      }
+
+      function activateAssistant(name){
+        // SAL remains visually but non-dominant
+        if(name === 'SAL'){
+          // no further action needed; SAL is already active
+        }
+        if(name === 'URVA'){
+          // show URVA panel (if implemented) and set booking listener
+          if(window.showURVAPanel) window.showURVAPanel();
+        }
+        if(name === 'AIVA'){
+          if(window.showAIVAPanel) window.showAIVAPanel();
+        }
+      }
+
+      // Wiring up button events
+      btnSal.addEventListener('click', ()=> assignAssistant('SAL'));
+      btnUrva.addEventListener('click', ()=> assignAssistant('URVA'));
+      btnAiva.addEventListener('click', ()=> assignAssistant('AIVA'));
+
+      // SAL greeting + selection flow
+      function initialSalFlow(){
+        const user = getUserProfile();
+        // SAL greets every visitor — use salSay if available
+        const namePart = (user.signedIn && user.username) ? (', ' + user.username) : '';
+        salSay(`Salutations${namePart}. Welcome to TaskMasters. How may I assist you along your path today?`);
+
+        // If signed in, ask about assistant assignment after a short delay
+        if(user.signedIn){
+          setTimeout(()=>{
+            showSelectionUI();
+          }, 1200);
+        }
+      }
+
+      // Keyword triggers to start Sales/Service/Solutions flows
+      function keywordListener(e){
+        const text = (e.detail && e.detail.text) ? e.detail.text : (e.target && e.target.value) ? e.target.value : '';
+        if(!text) return;
+        const t = text.toLowerCase();
+        if(t.includes('virtual assistant') || t.includes('assistant')){
+          window.dispatchEvent(new CustomEvent('assistant:trigger',{detail:{intent:'virtual assistant', raw:text}}));
+        }
+        if(t.includes('sales')) window.dispatchEvent(new CustomEvent('assistant:trigger',{detail:{intent:'sales', raw:text}}));
+        if(t.includes('service')) window.dispatchEvent(new CustomEvent('assistant:trigger',{detail:{intent:'service', raw:text}}));
+        if(t.includes('solutions')) window.dispatchEvent(new CustomEvent('assistant:trigger',{detail:{intent:'solutions', raw:text}}));
+      }
+
+      // Public API: other components can call salSay(text)
+      window.salSay = window.salSay || function(txt){
+        // find sal bubble
+        const sb = document.getElementById('sal-bubble');
+        const stxt = document.getElementById('sal-bubble-text');
+        if(sb && stxt){
+          stxt.textContent = txt;
+          sb.style.display = 'block';
+          sb.style.opacity = 0; sb.style.transition = 'opacity .18s ease';
+          requestAnimationFrame(()=> sb.style.opacity = 1);
+          setTimeout(()=>{ sb.style.opacity = 0; setTimeout(()=> sb.style.display='none',220); }, 2400);
+        } else {
+          console.log('SAL:', txt);
+        }
+      };
+
+      // URVA: listen for triggers and start sales/service/solutions process
+      window.addEventListener('assistant:trigger', (ev)=>{
+        const intent = ev.detail.intent;
+        const active = sessionStorage.getItem('activeAssistant') || null;
+        // If AIVA active, handoff to AIVA
+        if(active === 'AIVA'){
+          window.dispatchEvent(new CustomEvent('aiva:handle',{detail:{intent:intent}}));
+          return;
+        }
+        if(active === 'URVA'){
+          // URVA handles these intents
+          if(intent === 'sales' || intent === 'service' || intent === 'solutions' || intent === 'virtual assistant'){
+            // start sale/service/solutions process: open booking and preselect category
+            // Simple example: open booking and prefill service type with intent
+            const bookingSteps = document.querySelectorAll('.booking-step');
+            if(bookingSteps && bookingSteps.length){ bookingSteps.forEach((s,i)=> s.style.display = (i===1 ? 'block' : 'none')); }
+            const sel = document.querySelector('#booking-form select');
+            if(sel){
+              let val = intent.charAt(0).toUpperCase() + intent.slice(1);
+              let found=false; Array.from(sel.options).forEach(opt=>{ if(opt.text.trim().toLowerCase() === val.trim().toLowerCase()){ opt.selected=true; found=true; }});
+              if(!found){ const no = document.createElement('option'); no.text=val; no.value=val; sel.add(no); no.selected=true; }
+            }
+            salSay(`URVA has begun the ${intent} process and has prepared the booking interface.`);
+          }
+        } else {
+          // If no active assistant or SAL active, SAL offers to summon URVA/AIVA
+          salSay(`I can summon a Virtual Assistant to assist with that. Would you like me to assign one now?`);
+          showSelectionUI();
+        }
+      });
+
+      // simple init
+      document.addEventListener('DOMContentLoaded', ()=>{
+        // run SAL flow
+        initialSalFlow();
+
+        // also bind a global input enter as keyword detection (example)
+        document.addEventListener('keypress', (e)=>{
+          if(e.key === 'Enter'){
+            const activeEl = document.activeElement;
+            if(activeEl && (activeEl.tagName === 'INPUT' || activeEl.tagName === 'TEXTAREA')){
+              const txt = activeEl.value || '';
+              if(txt) keywordListener({detail:{text:txt}});
+            }
+          }
+        });
+
+      });
+
+    })();
+  </script>
+</body>
+</html>
+
+<!-- MULTI-STEP BOOKING & SCHEDULING INTERFACE -->
+<section id="booking" aria-labelledby="booking-title" style="padding:60px 20px; max-width:1200px; margin:0 auto;">
+<h2 id="booking-title" style="text-align:center;">Book a Service Appointment</h2>
+<p style="max-width:900px; margin:0 auto 40px; text-align:center; font-size:1.1em; line-height:1.6;">Use the guided, step-by-step scheduler to request a service date, select what you need, and provide project details. Task Masters will confirm availability within 24–48 hours.</p>
+
+<div id="booking-form" style="max-width:700px; margin:0 auto; background:#f5f5f5; padding:30px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+
+    <!-- STEP INDICATOR -->
+    <div id="step-indicator" style="display:flex; justify-content:space-between; margin-bottom:30px;">
+        <div style="flex:1; text-align:center; font-weight:bold; color:#6a0dad;">Step 1: Contact Info</div>
+        <div style="flex:1; text-align:center;">Step 2: Service Type</div>
+        <div style="flex:1; text-align:center;">Step 3: Schedule</div>
+        <div style="flex:1; text-align:center;">Step 4: Details</div>
+    </div>
+
+    <!-- STEP 1 -->
+    <div class="booking-step" id="step-1">
+        <label>Name</label>
+        <input type="text" style="width:100%; padding:10px; margin-bottom:15px;" />
+
+        <label>Email</label>
+        <input type="email" style="width:100%; padding:10px; margin-bottom:15px;" />
+
+        <label>Phone</label>
+        <input type="tel" style="width:100%; padding:10px; margin-bottom:15px;" />
+
+        <button style="padding:10px 20px; background:#6a0dad; color:white; border:none; border-radius:6px; cursor:pointer;">Next</button>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="booking-step" id="step-2" style="display:none;">
+        <label>Select Service Type</label>
+        <select style="width:100%; padding:10px; margin-bottom:15px;">
+            <option>Tech Repair & IT Troubleshooting</option>
+            <option>Handyman Repair</option>
+            <option>Landscaping & Yard Work</option>
+            <option>Concrete / Masonry</option>
+            <option>Remodeling / Contracting</option>
+            <option>General Consultation</option>
+        </select>
+
+        <button style="padding:10px 20px; background:#6a0dad; color:white; border:none; border-radius:6px; cursor:pointer;">Next</button>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="booking-step" id="step-3" style="display:none;">
+        <label>Preferred Date</label>
+        <input type="date" style="width:100%; padding:10px; margin-bottom:15px;" />
+
+        <label>Preferred Time</label>
+        <select style="width:100%; padding:10px; margin-bottom:15px;">
+            <option>Morning (8AM–12PM)</option>
+            <option>Afternoon (12PM–4PM)</option>
+            <option>Evening (4PM–8PM)</option>
+            <option>Flexible</option>
+        </select>
+
+        <button style="padding:10px 20px; background:#6a0dad; color:white; border:none; border-radius:6px; cursor:pointer;">Next</button>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="booking-step" id="step-4" style="display:none;">
+        <label>Describe Your Project</label>
+        <textarea style="width:100%; padding:10px; height:120px; margin-bottom:15px;"></textarea>
+
+        <label>Upload Photos (optional)</label>
+        <input type="file" accept="image/*" multiple style="width:100%; padding:10px; margin-bottom:20px;" />
+
+        <button style="padding:10px 20px; background:#6a0dad; color:white; border:none; border-radius:6px; cursor:pointer;">Submit Request</button>
+    </div>
+</div>
+</section>
+
+<!-- BOOKING LOGIC (JavaScript) -->
+<script>
+// Handle multi-step form navigation
+const steps = document.querySelectorAll('.booking-step');
+let currentStep = 0;
+
+function showStep(index) {
+  steps.forEach((step, i) => {
+    step.style.display = i === index ? 'block' : 'none';
+  });
+
+  // Update step indicator visuals
+  const indicators = document.querySelectorAll('#step-indicator div');
+  indicators.forEach((ind, i) => {
+    ind.style.fontWeight = i === index ? 'bold' : 'normal';
+    ind.style.color = i === index ? '#6a0dad' : '#555';
+  });
+}
+
+// Add 'Next' button logic to move between steps
+steps.forEach((step, i) => {
+  const nextButton = step.querySelector('button');
+  if (nextButton) {
+    nextButton.addEventListener('click', () => {
+      if (i < steps.length - 1) {
+        currentStep++;
+        showStep(currentStep);
+      } else {
+        alert('Your service request has been submitted! You will hear back within 24–48 hours.');
+      }
+    });
+  }
+});
+
+// Initialize first step
+showStep(0);
+</script>
